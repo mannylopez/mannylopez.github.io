@@ -4,6 +4,34 @@ const lightboxImg = document.getElementById("lightbox-img");
 const images = Array.from(document.querySelectorAll(".gallery img"));
 let currentIndex = 0;
 
+// START: Swipe to scroll through photos
+let startX = 0;
+let endX = 0;
+
+lightbox.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+});
+
+lightbox.addEventListener("touchend", e => {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const threshold = 50; // minimum px movement
+  const deltaX = endX - startX;
+
+  if (Math.abs(deltaX) < threshold) return;
+
+  if (deltaX > 0) {
+    showPrev(); // swipe right
+  } else {
+    showNext(); // swipe left
+  }
+}
+
+// END: Swipe to scroll through photos
+
 images.forEach((img, index) => {
   img.addEventListener("click", () => {
     currentIndex = index;
