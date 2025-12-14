@@ -110,6 +110,42 @@ footer {
 }
 
 /* ==================== */
+/* Light box */
+/* ==================== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: #1d1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.gallery img {
+  cursor: zoom-in;
+}
+
+.lightbox {
+  cursor: zoom-out;
+}
+
+/* ==================== */
 /* Responsive */
 /* ==================== */
 
