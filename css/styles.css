@@ -18,7 +18,7 @@ body {
 h1 {
 	font-size: 2.0rem;
 	font-weight: 400;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.03em;
 }
 
 /* ==================== */
@@ -45,18 +45,20 @@ body.index h1 {
 }
 
 .project-link {
-	font-size: 1rem;
+	font-size: 1.3rem;
 	color: #333;
 	text-decoration: none;
 	transition: color 0.2s ease;
 }
 
-.project-link:hover {
-	color: #666;
+.project-link:hover,
+.project-link:hover .project-date {
+	color: #543cea
 }
 
 .project-date {
 	color: #666;
+	transition: color 0.2s ease;
 }
 
 /* ==================== */
@@ -94,7 +96,8 @@ main {
 .date {
 	text-align: center;
 	padding: 1rem;
-	font-size: 1.0rem;
+	font-size: 1.2rem;
+	color: #666;
 }
 
 footer {
@@ -116,7 +119,7 @@ footer {
 	}
 
 	.project-link {
-		font-size: 0.95rem;
+		font-size: 1rem;
 	}
 
 	main {
