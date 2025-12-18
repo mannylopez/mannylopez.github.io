@@ -126,6 +126,11 @@ footer {
 	width: 100%;
 }
 
+.gallery-center {
+	width: 50%;
+	margin: 0 auto;
+}
+
 /* Ensure images in rows maintain aspect ratio */
 .gallery-row .photo-container {
 	width: 100%;
