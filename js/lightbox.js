@@ -7,14 +7,27 @@ let currentIndex = 0;
 // START: Swipe to scroll through photos
 let startX = 0;
 let endX = 0;
+let isSwipeGesture = false;
 
 lightbox.addEventListener("touchstart", e => {
+  if (e.touches.length !== 1) {
+    isSwipeGesture = false;
+    return;
+  }
+
+  isSwipeGesture = true;
   startX = e.touches[0].clientX;
 });
 
 lightbox.addEventListener("touchend", e => {
+  if (!isSwipeGesture || e.changedTouches.length !== 1) {
+    isSwipeGesture = false;
+    return;
+  }
+
   endX = e.changedTouches[0].clientX;
   handleSwipe();
+  isSwipeGesture = false;
 });
 
 function handleSwipe() {
