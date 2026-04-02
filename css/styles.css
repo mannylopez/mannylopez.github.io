@@ -21,6 +21,10 @@ h1 {
 	letter-spacing: 0.03em;
 }
 
+.escondido {
+	display: none;
+}
+
 /* ==================== */
 /* Index/Landing Page */
 /* ==================== */
