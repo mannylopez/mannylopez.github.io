@@ -55,6 +55,10 @@ body.index h1 {
 	transition: color 0.2s ease;
 }
 
+.project-link-contact {
+	margin-top: 1rem;
+}
+
 .project-link:hover,
 .project-link:hover .project-date {
 	color: #543cea;
